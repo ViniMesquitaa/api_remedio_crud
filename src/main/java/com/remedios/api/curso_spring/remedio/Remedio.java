@@ -9,8 +9,8 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 
-@Table(name = "Remedio")
-@Entity(name = "remedios1")
+@Table(name = "Remedios-db")
+@Entity(name = "remedio_api-db")
 @Getter
 @Setter
 @NoArgsConstructor

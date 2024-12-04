@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/remedios")
+@RequestMapping("/remedio_api")
 public class RemedyController {
     @Autowired
     RemedyRepository remedyRepository;
