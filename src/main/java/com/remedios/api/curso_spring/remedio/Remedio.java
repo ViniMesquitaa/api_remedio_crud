@@ -1,6 +1,7 @@
 package com.remedios.api.curso_spring.remedio;
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -10,7 +11,7 @@ import lombok.Setter;
 import java.time.LocalDate;
 
 @Table(name = "Remedios-db")
-@Entity(name = "remedio_api-db")
+@Entity(name = "db_remedio_api")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -29,7 +30,6 @@ public class Remedio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String nome;
 
     @Enumerated(EnumType.STRING)
@@ -41,5 +41,15 @@ public class Remedio {
 
     @Enumerated(EnumType.STRING)
     private Laboratorio laboratorio;
+
+    public void atualizarInfos(@Valid DadosAtualizarDTO dadosAtualizarDTO){
+        if(dadosAtualizarDTO.nome() != null){
+            this.nome = dadosAtualizarDTO.nome();
+        } if(dadosAtualizarDTO.via() != null){
+            this.via = dadosAtualizarDTO.via();
+        } if(dadosAtualizarDTO.lote() != null){
+            this.lote = dadosAtualizarDTO.lote();
+        }
+    }
 
 }
