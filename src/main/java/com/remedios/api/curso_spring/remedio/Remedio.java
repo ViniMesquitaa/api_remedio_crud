@@ -10,12 +10,12 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 
-@Table(name = "Remedios-db")
-@Entity(name = "db_remedio_api")
-@Getter
-@Setter
+@Table(name = "Remedios-DataBase")
+@Entity(name = "data_remedios")
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
+@Getter
+@Setter
 public class Remedio {
 
      public Remedio(DataAboutRemedy data) {
@@ -25,6 +25,7 @@ public class Remedio {
          this.quantidade = data.quantidade();
          this.validade = data.validade();
          this.laboratorio = data.laboratorio();
+         this.ativo = true;
      }
 
     @Id
@@ -34,13 +35,18 @@ public class Remedio {
 
     @Enumerated(EnumType.STRING)
     private Via via;
-
+    
     private String lote ;
     private int quantidade;
     private LocalDate validade;
 
     @Enumerated(EnumType.STRING)
     private Laboratorio laboratorio;
+    private boolean ativo;
+
+    public boolean getAtivo() {
+        return this.ativo = ativo;
+    }
 
     public void atualizarInfos(@Valid DadosAtualizarDTO dadosAtualizarDTO){
         if(dadosAtualizarDTO.nome() != null){
@@ -52,4 +58,11 @@ public class Remedio {
         }
     }
 
+    public void inativar() {
+        this.ativo = false;
+    }
+
+    public void reativar() {
+        this.ativo = true;
+    }
 }
