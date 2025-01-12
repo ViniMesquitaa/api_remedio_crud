@@ -1,5 +1,7 @@
-package com.remedios.api.curso_spring.remedy;
+package com.remedios.api.curso_spring.remedy.entities;
 
+import com.remedios.api.curso_spring.remedy.Laboratorio;
+import com.remedios.api.curso_spring.remedy.Via;
 import com.remedios.api.curso_spring.remedy.remedyDTO.DadosAtualizarDTO;
 import com.remedios.api.curso_spring.remedy.remedyDTO.DataAboutRemedyDTO;
 import jakarta.persistence.*;

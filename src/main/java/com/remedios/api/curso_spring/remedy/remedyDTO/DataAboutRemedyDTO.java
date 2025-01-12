@@ -1,5 +1,7 @@
-package com.remedios.api.curso_spring.remedio;
+package com.remedios.api.curso_spring.remedy.remedyDTO;
 
+import com.remedios.api.curso_spring.remedy.Laboratorio;
+import com.remedios.api.curso_spring.remedy.Via;
 import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotBlank;
@@ -8,7 +10,7 @@ import jakarta.validation.constraints.PositiveOrZero;
 
 import java.time.LocalDate;
 
-public record DataAboutRemedy(
+public record DataAboutRemedyDTO(
         @NotBlank @NotNull
         String nome,
 

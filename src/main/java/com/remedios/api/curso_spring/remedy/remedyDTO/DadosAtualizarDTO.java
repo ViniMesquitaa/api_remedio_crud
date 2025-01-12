@@ -1,7 +1,6 @@
-package com.remedios.api.curso_spring.remedio;
+package com.remedios.api.curso_spring.remedy.remedyDTO;
 
-import jakarta.validation.constraints.NotBlank;
-
+import com.remedios.api.curso_spring.remedy.Via;
 import jakarta.validation.constraints.NotNull;
 
 

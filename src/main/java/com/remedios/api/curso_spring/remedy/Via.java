@@ -1,4 +1,4 @@
-package com.remedios.api.curso_spring.remedio;
+package com.remedios.api.curso_spring.remedy;
 
 public enum Via {
     NASAL,
