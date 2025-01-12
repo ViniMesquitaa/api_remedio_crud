@@ -1,8 +1,9 @@
-package com.remedios.api.curso_spring.remedio;
+package com.remedios.api.curso_spring.remedy;
 
+import com.remedios.api.curso_spring.remedy.remedyDTO.DadosAtualizarDTO;
+import com.remedios.api.curso_spring.remedy.remedyDTO.DataAboutRemedyDTO;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,7 +19,7 @@ import java.time.LocalDate;
 @Setter
 public class Remedio {
 
-     public Remedio(DataAboutRemedy data) {
+     public Remedio(DataAboutRemedyDTO data) {
          this.nome = data.nome();
          this.via = data.via();
          this.lote = data.lote();
